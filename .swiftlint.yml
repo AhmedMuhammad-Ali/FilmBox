@@ -1,0 +1,93 @@
+disabled_rules: # rule identifiers to exclude from running
+ - trailing_whitespace
+ - todo
+ - trailing_semicolon
+ - sorted_imports
+ - control_statement
+ - no_space_in_method_call
+ - redundant_string_enum_value
+ - orphaned_doc_comment
+ - implicit_getter
+ - cyclomatic_complexity
+ - function_parameter_count
+ - operator_usage_whitespace
+ 
+excluded:
+  - Frameworks
+  - Pods
+  - Carthage
+  - Submodule
+opt_in_rules:
+  - empty_count
+  - explicit_init
+  - closure_spacing
+  - overridden_super_call
+  - redundant_nil_coalescing
+  - private_outlet
+  - nimble_operator
+  - attributes
+  - operator_usage_whitespace
+  - closure_end_indentation
+  - first_where
+  - sorted_imports
+  - object_literal
+  - number_separator
+  - prohibited_super_call
+  - fatal_error_message
+  - force_unwrapping
+  - legacy_constant
+  - vertical_parameter_alignment_on_call
+  - multiline_parameters
+  - notification_center_detachment
+    
+force_cast: error 
+force_try: error
+force_unwrapping: error
+legacy_constant: error
+vertical_parameter_alignment_on_call: error
+multiline_parameters: error
+notification_center_detachment: error
+
+warning_threshold: 12
+
+line_length:
+  error: 120
+  ignores_comments: true
+  
+# they can set both implicitly with an array
+type_body_length:
+  - 400 # warning
+  - 600 # error
+# or they can set both explicitly
+
+
+file_length:
+  warning: 1200
+  error: 1600
+
+number_separator:
+  minimum_length: 5
+
+type_name:
+  min_length: 4 # only warning
+  max_length: # warning and error
+    warning: 50
+    error: 60
+  excluded: iPhone # excluded via string
+identifier_name:
+  min_length: # only min_length
+    error: 3 # only error
+  excluded: # excluded via string array
+    - i
+    - id
+    - URL
+    - vc
+    - stb
+    - hud
+    - HUD
+    - Aya
+    - db
+    - to
+    - dX
+    - dY
+
