@@ -16,6 +16,9 @@
 		60E17685286DEC1E00609E34 /* FilmBoxTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60E17684286DEC1E00609E34 /* FilmBoxTests.swift */; };
 		60E1768F286DEC1E00609E34 /* FilmBoxUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60E1768E286DEC1E00609E34 /* FilmBoxUITests.swift */; };
 		60E17691286DEC1E00609E34 /* FilmBoxUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60E17690286DEC1E00609E34 /* FilmBoxUITestsLaunchTests.swift */; };
+		60E1769E286DFCB700609E34 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 60E1769D286DFCB700609E34 /* GoogleService-Info.plist */; };
+		60E176A1286E008500609E34 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 60E176A0286E008500609E34 /* FirebaseAnalytics */; };
+		60E176A3286E008500609E34 /* FirebaseCrashlytics in Frameworks */ = {isa = PBXBuildFile; productRef = 60E176A2286E008500609E34 /* FirebaseCrashlytics */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +52,7 @@
 		60E1768A286DEC1E00609E34 /* FilmBoxUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FilmBoxUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		60E1768E286DEC1E00609E34 /* FilmBoxUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilmBoxUITests.swift; sourceTree = "<group>"; };
 		60E17690286DEC1E00609E34 /* FilmBoxUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilmBoxUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		60E1769D286DFCB700609E34 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +60,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				60E176A1286E008500609E34 /* FirebaseAnalytics in Frameworks */,
+				60E176A3286E008500609E34 /* FirebaseCrashlytics in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -106,6 +112,7 @@
 				60E17676286DEC1E00609E34 /* Assets.xcassets */,
 				60E17678286DEC1E00609E34 /* LaunchScreen.storyboard */,
 				60E1767B286DEC1E00609E34 /* Info.plist */,
+				60E1769D286DFCB700609E34 /* GoogleService-Info.plist */,
 			);
 			path = FilmBox;
 			sourceTree = "<group>";
@@ -137,12 +144,17 @@
 				60E17666286DEC1C00609E34 /* Sources */,
 				60E17667286DEC1C00609E34 /* Frameworks */,
 				60E17668286DEC1C00609E34 /* Resources */,
+				60E176A4286E24DF00609E34 /* Crashlytics */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = FilmBox;
+			packageProductDependencies = (
+				60E176A0286E008500609E34 /* FirebaseAnalytics */,
+				60E176A2286E008500609E34 /* FirebaseCrashlytics */,
+			);
 			productName = FilmBox;
 			productReference = 60E1766A286DEC1C00609E34 /* FilmBox.app */;
 			productType = "com.apple.product-type.application";
@@ -215,6 +227,9 @@
 				Base,
 			);
 			mainGroup = 60E17661286DEC1C00609E34;
+			packageReferences = (
+				60E1769F286E008500609E34 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
 			productRefGroup = 60E1766B286DEC1C00609E34 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -232,6 +247,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				60E1767A286DEC1E00609E34 /* LaunchScreen.storyboard in Resources */,
+				60E1769E286DFCB700609E34 /* GoogleService-Info.plist in Resources */,
 				60E17677286DEC1E00609E34 /* Assets.xcassets in Resources */,
 				60E17675286DEC1C00609E34 /* Main.storyboard in Resources */,
 			);
@@ -252,6 +268,29 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		60E176A4286E24DF00609E34 /* Crashlytics */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${DWARF_DSYM_FOLDER_PATH}/${DWARF_DSYM_FILE_NAME}/Contents/Resources/DWARF/${TARGET_NAME}",
+				"$(SRCROOT)/$(BUILT_PRODUCTS_DIR)/$(INFOPLIST_PATH)",
+			);
+			name = Crashlytics;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${BUILD_DIR%/Build/*}/SourcePackages/checkouts/firebase-ios-sdk/Crashlytics/run\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		60E17666286DEC1C00609E34 /* Sources */ = {
@@ -439,6 +478,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = FilmBox/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -466,6 +506,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = FilmBox/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -618,6 +659,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		60E1769F286E008500609E34 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 8.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		60E176A0286E008500609E34 /* FirebaseAnalytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 60E1769F286E008500609E34 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalytics;
+		};
+		60E176A2286E008500609E34 /* FirebaseCrashlytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 60E1769F286E008500609E34 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseCrashlytics;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 60E17662286DEC1C00609E34 /* Project object */;
 }
