@@ -14,6 +14,10 @@
 		606956F22870B01B00E88120 /* EpisodeRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 606956F12870B01B00E88120 /* EpisodeRepository.swift */; };
 		606956F62870B22500E88120 /* ChannelRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 606956F52870B22500E88120 /* ChannelRepository.swift */; };
 		606956F82870B2C300E88120 /* CategoryRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 606956F72870B2C300E88120 /* CategoryRepository.swift */; };
+		606957022870D15000E88120 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 606957002870D15000E88120 /* HomeViewController.swift */; };
+		606957032870D15000E88120 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 606957012870D15000E88120 /* HomeViewController.xib */; };
+		606957052870D17900E88120 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 606957042870D17900E88120 /* HomeViewModel.swift */; };
+		606957072870D18900E88120 /* HomeDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 606957062870D18900E88120 /* HomeDataSource.swift */; };
 		60DAA70B286FB5150060BFC6 /* BaseURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60DAA708286FB5150060BFC6 /* BaseURL.swift */; };
 		60DAA70C286FB5150060BFC6 /* EndPoint+TargetType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60DAA709286FB5150060BFC6 /* EndPoint+TargetType.swift */; };
 		60DAA70D286FB5150060BFC6 /* EndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60DAA70A286FB5150060BFC6 /* EndPoint.swift */; };
@@ -60,6 +64,10 @@
 		606956F12870B01B00E88120 /* EpisodeRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpisodeRepository.swift; sourceTree = "<group>"; };
 		606956F52870B22500E88120 /* ChannelRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelRepository.swift; sourceTree = "<group>"; };
 		606956F72870B2C300E88120 /* CategoryRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryRepository.swift; sourceTree = "<group>"; };
+		606957002870D15000E88120 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		606957012870D15000E88120 /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
+		606957042870D17900E88120 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		606957062870D18900E88120 /* HomeDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeDataSource.swift; sourceTree = "<group>"; };
 		60DAA708286FB5150060BFC6 /* BaseURL.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseURL.swift; sourceTree = "<group>"; };
 		60DAA709286FB5150060BFC6 /* EndPoint+TargetType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "EndPoint+TargetType.swift"; sourceTree = "<group>"; };
 		60DAA70A286FB5150060BFC6 /* EndPoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EndPoint.swift; sourceTree = "<group>"; };
@@ -200,6 +208,41 @@
 			path = Interfaces;
 			sourceTree = "<group>";
 		};
+		606956FB2870D0D300E88120 /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				606956FC2870D0E200E88120 /* HomeScene */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		606956FC2870D0E200E88120 /* HomeScene */ = {
+			isa = PBXGroup;
+			children = (
+				606956FE2870D11C00E88120 /* View */,
+				606956FD2870D10600E88120 /* ViewModel */,
+			);
+			path = HomeScene;
+			sourceTree = "<group>";
+		};
+		606956FD2870D10600E88120 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				606957042870D17900E88120 /* HomeViewModel.swift */,
+				606957062870D18900E88120 /* HomeDataSource.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		606956FE2870D11C00E88120 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				606957002870D15000E88120 /* HomeViewController.swift */,
+				606957012870D15000E88120 /* HomeViewController.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		60DAA705286FB4C60060BFC6 /* Network */ = {
 			isa = PBXGroup;
 			children = (
@@ -253,6 +296,7 @@
 		60E1766C286DEC1C00609E34 /* FilmBox */ = {
 			isa = PBXGroup;
 			children = (
+				606956FB2870D0D300E88120 /* Presentation */,
 				606956F028709F9700E88120 /* DomainLayer */,
 				605F1F4A28706C860064381B /* Infrastructure */,
 				605F1F4928706BD70064381B /* DataLayer */,
@@ -415,6 +459,7 @@
 			files = (
 				60E1767A286DEC1E00609E34 /* LaunchScreen.storyboard in Resources */,
 				60E1769E286DFCB700609E34 /* GoogleService-Info.plist in Resources */,
+				606957032870D15000E88120 /* HomeViewController.xib in Resources */,
 				60E17677286DEC1E00609E34 /* Assets.xcassets in Resources */,
 				60E17675286DEC1C00609E34 /* Main.storyboard in Resources */,
 			);
@@ -585,14 +630,17 @@
 				606956F62870B22500E88120 /* ChannelRepository.swift in Sources */,
 				60DAA70D286FB5150060BFC6 /* EndPoint.swift in Sources */,
 				60DAA711286FB5530060BFC6 /* NetworkError.swift in Sources */,
+				606957052870D17900E88120 /* HomeViewModel.swift in Sources */,
 				60E17672286DEC1C00609E34 /* ViewController.swift in Sources */,
 				60DAA70C286FB5150060BFC6 /* EndPoint+TargetType.swift in Sources */,
+				606957022870D15000E88120 /* HomeViewController.swift in Sources */,
 				60DAA710286FB5530060BFC6 /* NetworkManager.swift in Sources */,
 				605F1F51287070540064381B /* ChannelMainResponseDTO.swift in Sources */,
 				60E1766E286DEC1C00609E34 /* AppDelegate.swift in Sources */,
 				606956F22870B01B00E88120 /* EpisodeRepository.swift in Sources */,
 				605F1F4F28706ECA0064381B /* EpisodeMainResponseDTO.swift in Sources */,
 				605F1F532870724A0064381B /* CategoryMainResponseDTO.swift in Sources */,
+				606957072870D18900E88120 /* HomeDataSource.swift in Sources */,
 				606956F82870B2C300E88120 /* CategoryRepository.swift in Sources */,
 				60DAA70B286FB5150060BFC6 /* BaseURL.swift in Sources */,
 				60E17670286DEC1C00609E34 /* SceneDelegate.swift in Sources */,
