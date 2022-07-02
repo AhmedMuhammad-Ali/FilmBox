@@ -14,11 +14,11 @@ struct EpisodeMainResponseDTO: Decodable {
 // MARK: - EpisodeResponseDTO
 //
 struct EpisodeResponseDTO: Decodable {
-    let media: [MediaDTO]?
+    let media: [EpisodeDTO]?
 }
 // MARK: - MediaDTO
 //
-struct MediaDTO: Decodable {
+struct EpisodeDTO: Decodable {
     let type, title: String?
     let coverAsset: CoverAssetDTO?
     let channel: ChannelsDTO?
@@ -32,4 +32,21 @@ struct ChannelsDTO: Decodable {
 //
 struct CoverAssetDTO: Codable {
     let url: String?
+}
+
+// MARK: - Mappings to Domain
+extension EpisodeResponseDTO {
+    func toDomain() -> [Episode] {
+        guard let media = media else { return [] }
+        return media.map { $0.toDomain() }
+    }
+}
+
+extension EpisodeDTO {
+    func toDomain() -> Episode {
+        return .init(title: title ?? "",
+                     channelTitle: channel?.title ?? "",
+                     imageURL: coverAsset?.url ?? "",
+                     type: type ?? "")
+    }
 }

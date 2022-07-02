@@ -10,7 +10,7 @@ import Foundation
 // Categories completion consists of array of `Category` in success case
 // OR string error message in case failure
 
-typealias CategoriesCompletion = (RequestResult<[CategoryDTO], String>) -> Void
+typealias CategoriesCompletion = (RequestResult<[Category], String>) -> Void
 
 // MARK: - CategoryRepository
 protocol CategoryRepository {

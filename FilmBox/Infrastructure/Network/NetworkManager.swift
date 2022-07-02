@@ -8,7 +8,11 @@
 import Foundation
 import Moya
 
-class NetworkManager {
+protocol NetworkService {
+    func request<T: Decodable>(_ target: AppEndPoint, completion: @escaping (RequestResult<T, String>) -> Void)
+}
+// MARK: - NetworkManager
+class NetworkManager: NetworkService {
     
     // MARK: - Properties
     
@@ -18,7 +22,7 @@ class NetworkManager {
     )
     
     /// Generic network call
-    func request<T: Codable>(_ target: AppEndPoint, completion: @escaping (RequestResult<T, String>) -> Void) {
+    func request<T: Decodable>(_ target: AppEndPoint, completion: @escaping (RequestResult<T, String>) -> Void) {
         provider.request(target) { result in
             switch result {
             case .success(let response):

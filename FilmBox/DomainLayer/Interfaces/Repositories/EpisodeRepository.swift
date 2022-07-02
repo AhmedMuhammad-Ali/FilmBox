@@ -7,9 +7,9 @@
 
 import Foundation
 
-// Episodes completion consists of array of Media in success case
+// Episodes completion consists of array of Episode in success case
 // OR string error message in case failure
-typealias EpisodesCompletion = (RequestResult<[MediaDTO], String>) -> Void
+typealias EpisodesCompletion = (RequestResult<[Episode], String>) -> Void
 
 // MARK: - EpisodeRepository
 protocol EpisodeRepository {
