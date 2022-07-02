@@ -11,6 +11,9 @@
 		605F1F4F28706ECA0064381B /* EpisodeMainResponseDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 605F1F4E28706ECA0064381B /* EpisodeMainResponseDTO.swift */; };
 		605F1F51287070540064381B /* ChannelMainResponseDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 605F1F50287070540064381B /* ChannelMainResponseDTO.swift */; };
 		605F1F532870724A0064381B /* CategoryMainResponseDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 605F1F522870724A0064381B /* CategoryMainResponseDTO.swift */; };
+		606956F22870B01B00E88120 /* EpisodeRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 606956F12870B01B00E88120 /* EpisodeRepository.swift */; };
+		606956F62870B22500E88120 /* ChannelRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 606956F52870B22500E88120 /* ChannelRepository.swift */; };
+		606956F82870B2C300E88120 /* CategoryRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 606956F72870B2C300E88120 /* CategoryRepository.swift */; };
 		60DAA70B286FB5150060BFC6 /* BaseURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60DAA708286FB5150060BFC6 /* BaseURL.swift */; };
 		60DAA70C286FB5150060BFC6 /* EndPoint+TargetType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60DAA709286FB5150060BFC6 /* EndPoint+TargetType.swift */; };
 		60DAA70D286FB5150060BFC6 /* EndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60DAA70A286FB5150060BFC6 /* EndPoint.swift */; };
@@ -54,6 +57,9 @@
 		605F1F4E28706ECA0064381B /* EpisodeMainResponseDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpisodeMainResponseDTO.swift; sourceTree = "<group>"; };
 		605F1F50287070540064381B /* ChannelMainResponseDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelMainResponseDTO.swift; sourceTree = "<group>"; };
 		605F1F522870724A0064381B /* CategoryMainResponseDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryMainResponseDTO.swift; sourceTree = "<group>"; };
+		606956F12870B01B00E88120 /* EpisodeRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpisodeRepository.swift; sourceTree = "<group>"; };
+		606956F52870B22500E88120 /* ChannelRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelRepository.swift; sourceTree = "<group>"; };
+		606956F72870B2C300E88120 /* CategoryRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryRepository.swift; sourceTree = "<group>"; };
 		60DAA708286FB5150060BFC6 /* BaseURL.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseURL.swift; sourceTree = "<group>"; };
 		60DAA709286FB5150060BFC6 /* EndPoint+TargetType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "EndPoint+TargetType.swift"; sourceTree = "<group>"; };
 		60DAA70A286FB5150060BFC6 /* EndPoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EndPoint.swift; sourceTree = "<group>"; };
@@ -168,6 +174,32 @@
 			path = DataMapping;
 			sourceTree = "<group>";
 		};
+		606956F028709F9700E88120 /* DomainLayer */ = {
+			isa = PBXGroup;
+			children = (
+				606956F42870B1B100E88120 /* Interfaces */,
+			);
+			path = DomainLayer;
+			sourceTree = "<group>";
+		};
+		606956F32870B19800E88120 /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+				606956F12870B01B00E88120 /* EpisodeRepository.swift */,
+				606956F52870B22500E88120 /* ChannelRepository.swift */,
+				606956F72870B2C300E88120 /* CategoryRepository.swift */,
+			);
+			path = Repositories;
+			sourceTree = "<group>";
+		};
+		606956F42870B1B100E88120 /* Interfaces */ = {
+			isa = PBXGroup;
+			children = (
+				606956F32870B19800E88120 /* Repositories */,
+			);
+			path = Interfaces;
+			sourceTree = "<group>";
+		};
 		60DAA705286FB4C60060BFC6 /* Network */ = {
 			isa = PBXGroup;
 			children = (
@@ -221,6 +253,7 @@
 		60E1766C286DEC1C00609E34 /* FilmBox */ = {
 			isa = PBXGroup;
 			children = (
+				606956F028709F9700E88120 /* DomainLayer */,
 				605F1F4A28706C860064381B /* Infrastructure */,
 				605F1F4928706BD70064381B /* DataLayer */,
 				60E1766D286DEC1C00609E34 /* AppDelegate.swift */,
@@ -549,6 +582,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				606956F62870B22500E88120 /* ChannelRepository.swift in Sources */,
 				60DAA70D286FB5150060BFC6 /* EndPoint.swift in Sources */,
 				60DAA711286FB5530060BFC6 /* NetworkError.swift in Sources */,
 				60E17672286DEC1C00609E34 /* ViewController.swift in Sources */,
@@ -556,8 +590,10 @@
 				60DAA710286FB5530060BFC6 /* NetworkManager.swift in Sources */,
 				605F1F51287070540064381B /* ChannelMainResponseDTO.swift in Sources */,
 				60E1766E286DEC1C00609E34 /* AppDelegate.swift in Sources */,
+				606956F22870B01B00E88120 /* EpisodeRepository.swift in Sources */,
 				605F1F4F28706ECA0064381B /* EpisodeMainResponseDTO.swift in Sources */,
 				605F1F532870724A0064381B /* CategoryMainResponseDTO.swift in Sources */,
+				606956F82870B2C300E88120 /* CategoryRepository.swift in Sources */,
 				60DAA70B286FB5150060BFC6 /* BaseURL.swift in Sources */,
 				60E17670286DEC1C00609E34 /* SceneDelegate.swift in Sources */,
 			);
