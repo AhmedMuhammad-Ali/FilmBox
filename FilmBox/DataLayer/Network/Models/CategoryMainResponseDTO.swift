@@ -20,3 +20,16 @@ struct CategoryResponseDTO: Decodable {
 struct CategoryDTO: Decodable {
     let name: String?
 }
+
+extension CategoryResponseDTO {
+    func toDomain() -> [Category] {
+        return categories?.map { $0.toDomain() } ?? []
+    }
+}
+
+extension CategoryDTO {
+    func toDomain() -> Category {
+        return .init(name: name ?? "")
+    }
+
+}

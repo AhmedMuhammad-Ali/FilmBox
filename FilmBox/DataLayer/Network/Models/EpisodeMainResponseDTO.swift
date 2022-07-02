@@ -37,8 +37,7 @@ struct CoverAssetDTO: Codable {
 // MARK: - Mappings to Domain
 extension EpisodeResponseDTO {
     func toDomain() -> [Episode] {
-        guard let media = media else { return [] }
-        return media.map { $0.toDomain() }
+        return media?.map { $0.toDomain() } ?? []
     }
 }
 

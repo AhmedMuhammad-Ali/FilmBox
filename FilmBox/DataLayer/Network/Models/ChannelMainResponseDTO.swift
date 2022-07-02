@@ -51,3 +51,30 @@ struct SeriesDTO: Decodable {
     let title: String?
     let coverAsset: CoverAssetDTO?
 }
+// MARK: - Mappings to Domain
+extension ChannelResponseDTO {
+    func toDomain() -> [Channel] {
+        return channels?.map { $0.toDomain() } ?? []
+    }
+}
+
+extension ChannelDTO {
+    func toDomain() -> Channel {
+        return .init(title: title ?? "",
+                     type: series?.isEmpty ?? true ? .course : .series,
+                     series: series?.map { $0.toDomain() } ?? [],
+                     seriesCount: series?.count,
+                     course: latestMedia?.map { $0.toDomain() } ?? [],
+                     mediaCount: latestMedia?.count)
+    }
+}
+extension LatestMediaDTO {
+    func toDomain() -> Course {
+        return .init(title: title ?? "", imageURL: coverAsset?.url ?? "")
+    }
+}
+extension SeriesDTO {
+    func toDomain() -> Series {
+        return .init(title: title ?? "", imageURL: coverAsset?.url ?? "")
+    }
+}

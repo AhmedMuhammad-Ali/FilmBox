@@ -6,7 +6,6 @@
 //
 
 import Foundation
-import SystemConfiguration
 
 final class DefaultEpisodeRepository {
     // MARK: - Properties

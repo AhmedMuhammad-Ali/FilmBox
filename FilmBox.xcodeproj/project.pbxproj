@@ -42,6 +42,8 @@
 		6069573F2870EB5F00E88120 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 6069573E2870EB5F00E88120 /* Kingfisher */; };
 		606957412870EBF400E88120 /* UIViewController+Alerts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 606957402870EBF400E88120 /* UIViewController+Alerts.swift */; };
 		606957442870EC1D00E88120 /* ImageRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 606957432870EC1D00E88120 /* ImageRepresentable.swift */; };
+		606957472870F27E00E88120 /* DefaultChannelRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 606957462870F27E00E88120 /* DefaultChannelRepository.swift */; };
+		606957492870FA9B00E88120 /* DefaultCategoryRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 606957482870FA9B00E88120 /* DefaultCategoryRepository.swift */; };
 		60DAA70B286FB5150060BFC6 /* BaseURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60DAA708286FB5150060BFC6 /* BaseURL.swift */; };
 		60DAA70C286FB5150060BFC6 /* EndPoint+TargetType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60DAA709286FB5150060BFC6 /* EndPoint+TargetType.swift */; };
 		60DAA70D286FB5150060BFC6 /* EndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60DAA70A286FB5150060BFC6 /* EndPoint.swift */; };
@@ -115,6 +117,8 @@
 		606957392870EA9400E88120 /* UIViewController+Loadding.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Loadding.swift"; sourceTree = "<group>"; };
 		606957402870EBF400E88120 /* UIViewController+Alerts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Alerts.swift"; sourceTree = "<group>"; };
 		606957432870EC1D00E88120 /* ImageRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageRepresentable.swift; sourceTree = "<group>"; };
+		606957462870F27E00E88120 /* DefaultChannelRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultChannelRepository.swift; sourceTree = "<group>"; };
+		606957482870FA9B00E88120 /* DefaultCategoryRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultCategoryRepository.swift; sourceTree = "<group>"; };
 		60DAA708286FB5150060BFC6 /* BaseURL.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseURL.swift; sourceTree = "<group>"; };
 		60DAA709286FB5150060BFC6 /* EndPoint+TargetType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "EndPoint+TargetType.swift"; sourceTree = "<group>"; };
 		60DAA70A286FB5150060BFC6 /* EndPoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EndPoint.swift; sourceTree = "<group>"; };
@@ -209,6 +213,8 @@
 			isa = PBXGroup;
 			children = (
 				606957172870E1FE00E88120 /* DefaultEpisodeRepository.swift */,
+				606957462870F27E00E88120 /* DefaultChannelRepository.swift */,
+				606957482870FA9B00E88120 /* DefaultCategoryRepository.swift */,
 			);
 			path = Repositories;
 			sourceTree = "<group>";
@@ -244,6 +250,7 @@
 		606956F42870B1B100E88120 /* Interfaces */ = {
 			isa = PBXGroup;
 			children = (
+				606957452870F0F100E88120 /* UseCase */,
 				606957082870D34400E88120 /* Entities */,
 				606956F32870B19800E88120 /* Repositories */,
 			);
@@ -367,6 +374,13 @@
 				606957432870EC1D00E88120 /* ImageRepresentable.swift */,
 			);
 			path = Protocols;
+			sourceTree = "<group>";
+		};
+		606957452870F0F100E88120 /* UseCase */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = UseCase;
 			sourceTree = "<group>";
 		};
 		60DAA705286FB4C60060BFC6 /* Network */ = {
@@ -773,6 +787,7 @@
 				6069570A2870D38D00E88120 /* Episode.swift in Sources */,
 				6069573B2870EA9400E88120 /* UIImage+LoadImage.swift in Sources */,
 				60DAA710286FB5530060BFC6 /* NetworkManager.swift in Sources */,
+				606957492870FA9B00E88120 /* DefaultCategoryRepository.swift in Sources */,
 				605F1F51287070540064381B /* ChannelMainResponseDTO.swift in Sources */,
 				606957442870EC1D00E88120 /* ImageRepresentable.swift in Sources */,
 				6069572A2870E9CD00E88120 /* Variable.swift in Sources */,
@@ -783,6 +798,7 @@
 				606957332870E9D900E88120 /* Disposable.swift in Sources */,
 				605F1F4F28706ECA0064381B /* EpisodeMainResponseDTO.swift in Sources */,
 				6069570E2870D60500E88120 /* Series.swift in Sources */,
+				606957472870F27E00E88120 /* DefaultChannelRepository.swift in Sources */,
 				6069572C2870E9CD00E88120 /* ObservationToken.swift in Sources */,
 				606957292870E9CD00E88120 /* Observer.swift in Sources */,
 				6069572D2870E9CD00E88120 /* BehaviorSubject.swift in Sources */,
