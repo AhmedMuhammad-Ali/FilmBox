@@ -52,8 +52,8 @@ private extension NetworkManager {
             configuration: .init(logOptions: .verbose)
         )
     }
-    
-    /// Hhandle Network Response
+
+    /// Handle Network Response
     func handleNetworkResponse(_ statusCode: Int) -> NetworkResult<String> {
         
         switch statusCode {
