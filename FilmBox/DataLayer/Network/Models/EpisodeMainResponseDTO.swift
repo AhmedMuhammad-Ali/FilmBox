@@ -45,7 +45,7 @@ extension EpisodeDTO {
     func toDomain() -> Episode {
         return .init(title: title ?? "",
                      channelTitle: channel?.title ?? "",
-                     imageURL: coverAsset?.url ?? "",
+                     imagePath: coverAsset?.url ?? "",
                      type: type ?? "")
     }
 }

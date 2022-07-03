@@ -70,11 +70,11 @@ extension ChannelDTO {
 }
 extension LatestMediaDTO {
     func toDomain() -> Course {
-        return .init(title: title ?? "", imageURL: coverAsset?.url ?? "")
+        return .init(title: title ?? "", imagePath: coverAsset?.url ?? "")
     }
 }
 extension SeriesDTO {
     func toDomain() -> Series {
-        return .init(title: title ?? "", imageURL: coverAsset?.url ?? "")
+        return .init(title: title ?? "", imagePath: coverAsset?.url ?? "")
     }
 }

@@ -9,5 +9,5 @@ import Foundation
 
 struct Series {
     let title: String
-    let imageURL: String
+    let imagePath: String
 }

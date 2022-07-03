@@ -10,6 +10,6 @@ import Foundation
 struct Episode {
     let title: String
     let channelTitle: String
-    let imageURL: String
+    let imagePath: String
     let type: String
 }
