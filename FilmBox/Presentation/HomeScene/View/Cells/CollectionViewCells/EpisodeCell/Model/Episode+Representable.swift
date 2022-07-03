@@ -23,6 +23,4 @@ extension Episode: EpisodeCellRepresentable {
     var placeholderImage: UIImage? {
         .placeHolder
     }
-
-
 }

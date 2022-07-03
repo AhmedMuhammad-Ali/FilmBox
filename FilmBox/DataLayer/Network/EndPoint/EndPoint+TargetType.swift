@@ -20,11 +20,6 @@ extension AppEndPoint: TargetType {
         switch self {
         
         // MARK: - Home
-        
-        case .getCategories:
-            return "A0CgArX3"
-        case .getChannels:
-            return "Xt12uVhM"
         case .getEpisodes:
             return "z5AExTtw"
         }
@@ -45,11 +40,6 @@ extension AppEndPoint: TargetType {
         switch self {
         
         // MARK: - Home
-        
-        case .getCategories:
-            return .requestPlain
-        case .getChannels:
-            return .requestPlain
         case .getEpisodes:
             return .requestPlain
         }

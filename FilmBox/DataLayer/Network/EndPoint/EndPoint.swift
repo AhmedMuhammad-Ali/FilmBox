@@ -10,12 +10,7 @@ import Foundation
 // MARK: - EndPoint
 //
 enum AppEndPoint {
-    
-    // MARK: - Home
-    // categories
-    case getCategories
-    // channels
-    case getChannels
+
     // episodes
     case getEpisodes
     

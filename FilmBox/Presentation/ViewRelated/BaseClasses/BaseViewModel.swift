@@ -6,14 +6,3 @@
 //
 
 import Foundation
-
-// MARK: - Base View Model
-//
-class BaseViewModel {
-
-    typealias Element = Any
-
-    /// State
-    var state = PublishSubject<State<Element>>()
-
-}
