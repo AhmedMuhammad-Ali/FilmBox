@@ -20,7 +20,7 @@ extension UITableView {
     func dequeue<T: UITableViewCell>(_: T.Type) -> T {
         guard
             let cell = dequeueReusableCell(withIdentifier: String(describing: T.self)) as? T
-        else { fatalError("Could not deqeue cell with type \(T.self)") }
+        else { fatalError("Could not dequeue cell with type \(T.self)") }
         
         return cell
     }
@@ -30,7 +30,7 @@ extension UITableView {
         register(T.loadNib(), forHeaderFooterViewReuseIdentifier: T.classNameWithoutNamespaces)
     }
     
-    /// Dequee reusable `HeaderFooterView` with type.
+    /// Dequeue reusable `HeaderFooterView` with type.
     func dequeueHeaderFooter<T: UITableViewHeaderFooterView>() -> T {
         guard let header = dequeueReusableHeaderFooterView(withIdentifier: T.classNameWithoutNamespaces) as? T else {
             fatalError("Unable to get header view")
